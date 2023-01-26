@@ -1,0 +1,76 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: rgb(255, 240, 253);
+}
+h1 {
+  color: darkslategray;
+  text-align: center;
+  padding-top: 25px;
+}
+.container {
+  width: 100px;
+  height: 100px;
+  margin: 20% auto;
+  display: flex;
+  justify-content: space-between;
+}
+div {
+  padding-top: 5px;
+}
+.loader {
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.loader span {
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  border-radius: 50%;
+  transition: all 0.5s;
+  animation: animate 2s infinite;
+}
+.loader span:nth-child(1) {
+  animation-delay: 0;
+}
+.loader span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.loader span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.loader span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.loader span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.loader span:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.loader h1 {
+  color: rgb(169, 199, 255);
+}
+@keyframes animate {
+  0% {
+    border: 1px solid #fff;
+    background: transparent;
+    transform: translateY(0);
+  }
+  50% {
+    border: 1px solid #fff;
+    background: rgb(26, 243, 192);
+    transform: translateY(-25px);
+  }
+  100% {
+    border: 1px solid #fff;
+    background: rgb(208, 37, 255);
+    transform: translateY(0);
+  }
+}
